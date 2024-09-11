@@ -2,6 +2,7 @@
 
 
 ## 1. Consideraciones generales
+- El proyecto se llevará a cabo en parejas
 - El proyecto debe implementarse en python y no se podrá utilizar ninguna librería a excepción de `rich`.
 - El juego se llevará a cabo en la terminal.
 - Se utilizará un número aleatorio entre 1 y 100 como número secreto
@@ -53,4 +54,51 @@ Una vez tengas una versión básica del juego y que cumple con los requerimiento
 
 ## 4. Entregables
 Una vez termines el juego, deberás compartir en UVirtual:
-- El link al Pull Request con tu solución. El Pull request deberá llevar tu nombre
+- El link al Pull Request con tu solución. El Pull request deberá llevar los nombres de los integrantes. Solo deberán hacer una entrega en UVirtual.
+
+## 5. Criterios evaluatvos
+
+### 5.1. Funcionamiento (Cumple los requerimientos mínimos) - 30%
+
+Aspectos a evaluar:
+
+- El programa se ejecuta sin errores.
+- Los resultados son correctos y cumplen con los requerimientos dados (por ejemplo, devuelve los valores correctos, realiza las operaciones solicitadas).
+
+
+
+### 5.2. Sustentación - 30%
+
+Aspectos a evaluar:
+
+- El estudiante puede explicar claramente cómo funciona el código y cómo abordó la solución.
+- Puede responder preguntas relacionadas con posibles errores, limitaciones o mejoras del programa.
+- Demuestra comprensión de los conceptos utilizados (estructuras de control, funciones, tipos de datos, etc.).
+- Muestra dominio sobre la lógica detrás de la solución, más allá de la simple ejecución.
+
+
+
+### 5.3. Legibilidad y orden del código - 20%
+
+
+Aspectos a evaluar:
+
+- El código sigue una convención de nombres clara y coherente para variables, funciones y demás elementos.
+
+- Uso adecuado de indentación y espacios para mejorar la lectura.
+
+- Se incluyen comentarios que expliquen partes importantes del código (sin ser excesivos).
+
+
+### 5.4. Experiencia del usuario - 20%
+
+
+Aspectos a evaluar:
+
+- El programa muestra mensajes claros y fáciles de entender al usuario (por ejemplo, instrucciones claras de entrada de datos).
+
+- Se maneja adecuadamente la validación de entradas, mostrando mensajes útiles en caso de errores.
+
+- Flujo natural de interacción con el programa (por ejemplo, no se repiten innecesariamente solicitudes de entrada).
+
+- La experiencia es satisfactoria: rápida, sin bloqueos o cierres inesperados, y responde a las expectativas del usuario.
