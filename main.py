@@ -1,4 +1,5 @@
-import random
+import random # Usado para elegir el número aleatorio
+import time # Usado para poner tiempos entre líneas de texto y facilitar la lectura
 
 def jugar_guess():
     # Genera un número aleatorio al inicio de la ronda
@@ -11,41 +12,62 @@ def jugar_guess():
 
     while jugando:
         # Turno del jugador
-        print("\nTu turno")
+        print("Tu turno")
         user_num = int(input("Intenta adivinar el número: "))
         int_jugador.append(user_num)
+        time.sleep(0.3)
         if user_num < random_num:
-            print(f"{user_num} es menor que el número aleatorio, intenta de nuevo\n")
+            print(f"{user_num} es menor que el número aleatorio, intenta de nuevo")
+            print("-------------------------------------------------------------")
+            time.sleep(0.35)
         elif user_num > random_num:
-            print(f"{user_num} es mayor que el número aleatorio, intenta de nuevo\n")
+            print(f"{user_num} es mayor que el número aleatorio, intenta de nuevo")
+            print("-------------------------------------------------------------")
+            time.sleep(0.35)
         elif user_num == random_num:
-            print(f"¡Felicidades! {user_num} es el número correcto\n")
+            print(f"\n¡Felicidades! {user_num} es el número correcto\n")
+            time.sleep(0.2)
             print(f"Tus intentos fueron: {int_jugador}")
-            print(f"Los intentos del adversario fueron: {int_pc}")
+            print(f"Los intentos del adversario fueron: {int_pc}\n")
+            time.sleep(0.2)
             jugando = False
             jugar_de_nuevo()
+            break
+
+        time.sleep(1)
 
         # Turno del ordenador
         pc_num = random.randint(1, 100)
         int_pc.append(pc_num)
         print("Turno del adversario")
         print(f"El número del adversario es {pc_num}")
+        time.sleep(0.3)
         if pc_num < random_num:
-            print(f"{pc_num} es menor que el número aleatorio\n")
+            print(f"{pc_num} es menor que el número aleatorio")
+            print("-------------------------------------------------------------")
+            time.sleep(0.35)
         elif pc_num > random_num:
-            print(f"{pc_num} es mayor que el número aleatorio\n")
+            print(f"{pc_num} es mayor que el número aleatorio")
+            print("-------------------------------------------------------------")
+            time.sleep(0.35)
         elif pc_num == random_num:
             print("¡Derrota! El adversario adivinó el número")
+            time.sleep(0.15)
             print(f"El número correcto era {random_num}\n")
+            time.sleep(0.2)
             print(f"Tus intentos fueron: {int_jugador}")
-            print(f"Los intentos del adversario fueron: {int_pc}")
+            print(f"Los intentos del adversario fueron: {int_pc}\n")
+            time.sleep(0.2)
             jugando = False
             jugar_de_nuevo()
+            break
+
 
 # Función para jugar otra vez
 def jugar_de_nuevo():
     while True:
         respuesta = input("¿Quieres jugar de nuevo? (si/no): ").strip().lower()
+        print("-------------------------------------------------------------")
         
         if respuesta == 'si':
             jugar_guess()
