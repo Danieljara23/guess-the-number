@@ -1,5 +1,5 @@
 import random # Usado para elegir el número aleatorio
-import time # Usado para poner tiempos entre líneas de texto y facilitar la lectura
+import time
 
 def jugar_guess():
     # Genera un número aleatorio al inicio de la ronda
@@ -15,7 +15,7 @@ def jugar_guess():
         print("Tu turno")
         user_num = int(input("Intenta adivinar el número: "))
         int_jugador.append(user_num)
-        time.sleep(0.3)
+        time.sleep(0.3) # Usado para poner tiempos entre líneas de texto y facilitar la lectura, se mide en segundos
         if user_num < random_num:
             print(f"{user_num} es menor que el número aleatorio, intenta de nuevo")
             print("-------------------------------------------------------------")
