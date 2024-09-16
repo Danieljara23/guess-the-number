@@ -15,16 +15,17 @@ def jugar_guess():
         print("Tu turno")
         user_num = int(input("Intenta adivinar el número: "))
         int_jugador.append(user_num)
-        time.sleep(0.3) # Usado para poner tiempos entre líneas de texto y facilitar la lectura, se mide en segundos
+        time.sleep(0.2) # Usado para poner tiempos entre líneas de texto y facilitar la lectura, se mide en segundos
         if user_num < random_num:
             print(f"{user_num} es menor que el número aleatorio, intenta de nuevo")
             print("-------------------------------------------------------------")
-            time.sleep(0.35)
+            time.sleep(0.25)
         elif user_num > random_num:
             print(f"{user_num} es mayor que el número aleatorio, intenta de nuevo")
             print("-------------------------------------------------------------")
-            time.sleep(0.35)
+            time.sleep(0.25)
         elif user_num == random_num:
+            print("-------------------------------------------------------------")
             print(f"\n¡Felicidades! {user_num} es el número correcto\n")
             time.sleep(0.2)
             print(f"Tus intentos fueron: {int_jugador}")
@@ -34,14 +35,14 @@ def jugar_guess():
             jugar_de_nuevo()
             break
 
-        time.sleep(1)
+        time.sleep(0.5)
 
         # Turno del ordenador
         pc_num = random.randint(1, 100)
         int_pc.append(pc_num)
         print("Turno del adversario")
         print(f"El número del adversario es {pc_num}")
-        time.sleep(0.3)
+        time.sleep(0.2)
         if pc_num < random_num:
             print(f"{pc_num} es menor que el número aleatorio")
             print("-------------------------------------------------------------")
@@ -51,6 +52,7 @@ def jugar_guess():
             print("-------------------------------------------------------------")
             time.sleep(0.35)
         elif pc_num == random_num:
+            print("-------------------------------------------------------------")
             print("¡Derrota! El adversario adivinó el número")
             time.sleep(0.15)
             print(f"El número correcto era {random_num}\n")
