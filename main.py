@@ -5,6 +5,7 @@ numero=random.randint(1,100)
 intentos_usuario = []
 intentos_computadora = []
 turno=True
+print(numero)
 
 while playing:
     if turno == True:
@@ -22,10 +23,10 @@ while playing:
         else:
             print("Es menor")
         turno= False
-    else:
-      print("Es mi turno")
+    if  turno == False:
+
       intento_Comp=random.randint(1,100)
-      print(f"Elijo el número: {intento_Comp}")
+      print(f"Es mi turno, elijo el número: {intento_Comp}")
       intentos_computadora.append(intento_Comp)
       if intento_Comp ==  numero:
         print(f"¡Lo he adivinado! El número era {numero}")
