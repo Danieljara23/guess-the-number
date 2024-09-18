@@ -10,6 +10,10 @@ def jugar_guess():
     int_jugador = []
     int_pc = []
 
+    # Límites para la adivinanza de la computadora
+    min_pc = 1
+    max_pc = 100
+
     while jugando:
         # Turno del jugador
         print("Tu turno")
@@ -37,8 +41,8 @@ def jugar_guess():
 
         time.sleep(0.5)
 
-        # Turno del ordenador
-        pc_num = random.randint(1, 100)
+# Turno del ordenador
+        pc_num = random.randint(min_pc, max_pc)
         int_pc.append(pc_num)
         print("Turno del adversario")
         print(f"El número del adversario es {pc_num}")
@@ -46,10 +50,14 @@ def jugar_guess():
         if pc_num < random_num:
             print(f"{pc_num} es menor que el número aleatorio")
             print("-------------------------------------------------------------")
+            # Aqui se hace un ajuste al límite del compu para que no elija números más bajos :b
+            min_pc = pc_num + 1
             time.sleep(0.35)
         elif pc_num > random_num:
             print(f"{pc_num} es mayor que el número aleatorio")
             print("-------------------------------------------------------------")
+            # Y aquí para que no elija números más altos :b
+            max_pc = pc_num - 1
             time.sleep(0.35)
         elif pc_num == random_num:
             print("-------------------------------------------------------------")
