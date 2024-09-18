@@ -15,6 +15,7 @@ def jugar():
     sucesos_ordenador = []
 
     console.print("¡Bienvenido al juego de adivinanza!", style="bold yellow")
+    print("")
     console.print("Tendrás que adivinar un número entre 1 y 100, turnándote con el ordenador.", style="italic cyan")
     console.print("====================================================================")
 
