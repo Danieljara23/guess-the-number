@@ -50,6 +50,8 @@ while playing:
                 AI_guess_list.clear()
                 user_guess_list.clear()
                 the_number= random.randint(1,100)
+                lower_limit= 0
+                higher_limit= 100
                 user_turn= True
                 playing = True
             elif user_input == 2:
@@ -100,6 +102,9 @@ while playing:
             if user_input == 1:
                 AI_guess_list.clear()
                 user_guess_list.clear()
+                the_number= random.randint(1,100)
+                lower_limit= 0
+                higher_limit= 100
                 user_turn= True
                 playing = True
             elif user_input == 2:
@@ -107,7 +112,7 @@ while playing:
                 table = Table(show_header=True, header_style="bold blue")
                 table.add_column("[blue]Jugador[/]", justify="full")
                 table.add_column("[blue]Computadora[/]")
-                for i in range(len(user_guess_list)):
+                for i in range(len(AI_guess_list)):
                     table.add_row(f"[green]{user_guess_list[i]}[/]",f"[green]{AI_guess_list[i]}[/]")
         
                 console.print(table,justify="center")
