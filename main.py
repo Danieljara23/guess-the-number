@@ -87,7 +87,7 @@ def jugar_de_nuevo():
             print("¡Gracias por jugar! Hasta la próxima.")
             break
         else:
-            print("Respuesta inválida. Por favor, responde con 'sí' o 'no'. Inténtalo de nuevo.") 
+            print("Respuesta inválida. Por favor, responde con 'si' o 'no'. Inténtalo de nuevo.") 
             #  La función se repite hasta que se elige la opcion correcta
 
 # Se inicia la partida
