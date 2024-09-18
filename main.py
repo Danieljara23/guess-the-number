@@ -23,10 +23,12 @@ def jugar_guess():
         if user_num < random_num:
             print(f"{user_num} es menor que el número aleatorio, intenta de nuevo")
             print("-------------------------------------------------------------")
+            min_pc = user_num + 1
             time.sleep(0.25)
         elif user_num > random_num:
             print(f"{user_num} es mayor que el número aleatorio, intenta de nuevo")
             print("-------------------------------------------------------------")
+            max_pc = user_num - 1
             time.sleep(0.25)
         elif user_num == random_num:
             print("-------------------------------------------------------------")
@@ -50,13 +52,13 @@ def jugar_guess():
         if pc_num < random_num:
             print(f"{pc_num} es menor que el número aleatorio")
             print("-------------------------------------------------------------")
-            # Aqui se hace un ajuste al límite del compu para que no elija números más bajos :b
+            # Aqui se hace un ajuste al límite del compu para que no elija números más bajos 
             min_pc = pc_num + 1
             time.sleep(0.35)
         elif pc_num > random_num:
             print(f"{pc_num} es mayor que el número aleatorio")
             print("-------------------------------------------------------------")
-            # Y aquí para que no elija números más altos :b
+            # Y aquí para que no elija números más altos
             max_pc = pc_num - 1
             time.sleep(0.35)
         elif pc_num == random_num:
