@@ -20,7 +20,18 @@ while game == True:
         print("Lo lograste!!")
         print("Felicidades")
         game = False
-        break
+        
+        if game == False:
+            print("¿Deseas jugar de nuevo?")
+            print("1. SI")
+            print("2. No")
+    
+        decicion = int(input("..."))
+        if decicion == 1:
+            game = True
+        else:
+            print("Gracias por jugar")
+            break
     
     if user_number > mysterious_number:
         print("Pista: Te pasaste")
@@ -33,4 +44,15 @@ while game == True:
         print("La IA encontró el número primero que tu")
         print("Suerte la próxima")
         game = False
-        break
+        
+        if game == False:
+            print("¿Deseas jugar de nuevo?")
+            print("1. SI")
+            print("2. No")
+    
+            decicion = int(input("..."))
+            if decicion == 1:
+                game = True
+            else:
+                print("Gracias por juagar")
+                break
