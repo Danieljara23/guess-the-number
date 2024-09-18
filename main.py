@@ -56,3 +56,5 @@ while game == True:
             else:
                 print("Gracias por juagar")
                 break
+                
+print("Hola")
