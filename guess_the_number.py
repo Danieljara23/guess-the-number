@@ -1,18 +1,29 @@
 import random
 
 def jugar():
+    print("¡Bienvenido al juego de adivinanza! Trata de adivinar el número antes que la máquina.")
+    
     while True:
         random_number = random.randint(1, 100)  
-        print("He generado un número entre 1 y 100. ¡Intenten adivinarlo!")
+        print("\nHe generado un número entre 1 y 100. ¡Intenten adivinarlo!")
 
         
         suposiciones_jugador = []
         suposiciones_computador = []
 
+        
+        rango_min = 1
+        rango_max = 100
+
         jugando = True
         while jugando:
-        
-            player = int(input("Ingresa un número: "))
+            
+            try:
+                player = int(input("\nIngresa un número: "))
+            except ValueError:
+                print("Por favor, ingresa un número válido.")
+                continue
+
             suposiciones_jugador.append(player)  
 
             if player == random_number:
@@ -25,23 +36,25 @@ def jugar():
 
             
             if jugando:  
-                player_computador = random.randint(1, 100)
+                player_computador = random.randint(rango_min, rango_max)
                 suposiciones_computador.append(player_computador)  
-                print(f"El computador adivina el numero: {player_computador}")
+                print(f"El computador adivina: {player_computador}")
 
                 if player_computador == random_number:
                     print(f"El computador ganó. El número era: {random_number}")
                     jugando = False
                 elif player_computador < random_number:
                     print("La suposición del computador es menor.")
+                    rango_min = player_computador + 1  
                 else:
                     print("La suposición del computador es mayor.")
+                    rango_max = player_computador - 1  
 
         
         print("\nSuposiciones del jugador:", suposiciones_jugador)
         print("Suposiciones del computador:", suposiciones_computador)
 
-    
+        
         jugar_de_nuevo = input("\n¿Quieres jugar de nuevo? (s/n): ").lower()
         if jugar_de_nuevo != 's':
             print("Gracias por jugar. ¡Hasta luego!")
