@@ -34,7 +34,7 @@ def MostrarListas():
     print("Lista Ordenador: ")
     print(*lista_ordenador, sep= ", ")
 
-def Jugar():
+def jugar():
     global numero_random
     numero_random = random.randint(1, 100) 
     print("Hola, comenzemos con este juego de adivinanza.")
@@ -50,7 +50,7 @@ def Jugar():
 
 
 while True:
-    Jugar()
+    jugar()
     if(int(input("¿Deseas volver a jugar? 1:Si o 0:No ")) != 1):
         break
 
