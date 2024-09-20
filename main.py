@@ -1,5 +1,7 @@
 import random
 import time
+from rich import print
+
 def jugar():
     random_number = random.randint(1, 101)
     playing = True
@@ -33,3 +35,4 @@ while True:
     if jugar_de_nuevo.lower() != 's':
         print("¡Gracias por jugar!")
         break
+    
