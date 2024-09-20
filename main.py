@@ -10,7 +10,7 @@ while running:
     if guess == randomnumber:
         user_attempts += 1
         print("The player wins.")
-        print("It took the player", user_attempts, "attempt to get the right answer.")
+        print("It took the player", user_attempts, "attempt(s) to get the right answer.")
         running = False
     elif guess <= randomnumber:
         user_attempts += 1
@@ -23,7 +23,7 @@ while running:
     if pc_guess == randomnumber:
         computer_attepmts += 1
         print("The computer wins.")
-        print("It took the computer", computer_attepmts, "attempt to get the right answer.")
+        print("It took the computer", computer_attepmts, "attempt(s) to get the right answer.")
         running = False
     elif pc_guess <= randomnumber:
         computer_attepmts += 1
