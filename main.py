@@ -2,11 +2,14 @@ import random
 
 def adivinar_numero():
     jugando = True
+    minimo_num=1
+    max_num=100
+    
     
     while jugando:
         # Se elige el número aleatorio entre 1 y 100
-        numero = random.randint(1, 100)
-
+        numero = random.randint(1,100)
+     
         # Variables para guardar los intentos del jugador y la CPU
         intentos_usuario = []
         intentos_computadora = []
@@ -40,14 +43,16 @@ def adivinar_numero():
                     partida_en_curso = False
                 elif intento_usuario < numero:
                     print("El número es mayor.")
+                    minimo_num=intento_usuario+1
                 else:
                     print("El número es menor.")
+                    max_num=intento_usuario-1
 
                 turno = False
             
             if not turno and partida_en_curso:
             # Turno de la CPU
-                intento_computadora = random.randint(1, 100)
+                intento_computadora = random.randint(minimo_num,max_num)
                 print(f"Es mi turno, elijo el número: {intento_computadora}")
                 intentos_computadora.append(intento_computadora)
 
@@ -58,8 +63,11 @@ def adivinar_numero():
                     partida_en_curso = False
                 elif intento_computadora < numero:
                     print("El número es mayor.")
+                    minimo_num=intento_computadora+1
                 else:
                     print("El número es menor.")
+                    max_num = intento_computadora - 1
+                    
                 
                 turno = True # Turno del usuario
         
