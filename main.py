@@ -9,16 +9,16 @@ console = Console()
 def jugar_adivina_el_numero():
     # La bienvenida
     console.print("¡Bienvenido a Adivina el Número!", style="bold underline cyan on black")
-    console.print("Instrucciones:", style="bold underline magenta")
+    console.print("Instrucciones:", style="bold underline yellow")
     console.print("1. El juego consiste en adivinar un número secreto entre 1 y 100.", style="bold yellow")
     console.print("2. Puedes elegir jugar contra la computadora o contra un amigo.", style="bold yellow")
     console.print("3. Después de 15 intentos, recibirás pistas avanzadas (si el número es par o impar).", style="bold yellow")
     console.print("4. Si deseas rendirte en cualquier momento, presiona 'r'.", style="bold yellow")
-    console.print("¡Buena suerte!\n", style="bold green on black")
+    console.print("¡Buena suerte!\n", style="bold underline cyan on black")
     
     # Elegir el modo de juego
     console.print("Elige el modo de juego: '1' para jugar contra la computadora, '2' para jugar con un amigo:", style="bold white on blue")
-    modo = input()  # Usamos input() normal sin estilo
+    modo = input()  
     
     # Generar número secreto
     numero_secreto = random.randint(1, 100)
@@ -34,10 +34,10 @@ def jugar_adivina_el_numero():
         no_valido = True
         while no_valido:
             console.print(f"Jugador {jugador}, adivina el número (entre 1 y 100 o presiona 'r' para rendirte):", style="bold blue on black")
-            suposicion = input().lower()  # Usamos input() sin estilo
+            suposicion = input().lower()  
             if suposicion == 'r':
                 console.print(f"Jugador {jugador} se ha rendido. ¡Fin del juego!", style="bold white on red")
-                exit()  # Termina el programa
+                exit() 
             try:
                 suposicion = int(suposicion)
                 if 1 <= suposicion <= 100:
@@ -72,7 +72,7 @@ def jugar_adivina_el_numero():
 
         # Comparar la suposición con el número secreto
         if suposicion == numero_secreto:
-            final_tiempo = time.time()  # Fin del temporizador
+            final_tiempo = time.time()  
             tiempo_total = final_tiempo - inicio_tiempo
             
             if jugador_actual == 1:
@@ -92,7 +92,7 @@ def jugar_adivina_el_numero():
             
             # Preguntar si quiere jugar otra vez
             console.print("¿Quieres jugar otra vez? (s/n):", style="bold white on magenta")
-            jugar_otra_vez = input().lower()  # Usamos input() sin estilo
+            jugar_otra_vez = input().lower()  
             if jugar_otra_vez == 's':
                 jugar_adivina_el_numero()
             else:
